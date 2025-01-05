@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Content</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h2 { color: #333; }
+        img { max-width: 100%; height: auto; margin-bottom: 20px; }
+        .page { margin-bottom: 40px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Extracted PDF Content</h1>
+<div class="page"><h2>Page 1</h2>
+<p>360 <br> <br>深度學習應用於蝴蝶蘭盆苗病徵檢測之研究 <br>張荃瑋 1 <br>錢沛濬 1 <br>楊皓勛 1 <br>許弘昇 2 <br>黃膺任 1* <br>1 國立嘉義大學 生物機電工程學系 <br>2 國立嘉義大學 資訊工程學系 <br>* jen@mail.ncyu.edu.tw <br> <br> <br>摘要 <br> <br>在蝴蝶蘭幼苗的培育過程中，常見的病害包括軟腐病、炭疽病、黃葉病和疫<br>病等，中中軟軟腐病 具傳染性，易通過葉片接觸迅速擴散至鄰近植株。因此，<br>早期發現並即時移除感染植株是避免病害蔓延的關鍵。目前，台灣的蝴蝶蘭病徵<br>檢測主要依賴人工操作，這不僅耗時且容易產生人為誤差，導致檢測效率和準確<br>度不佳。為解決這一問題，本研究旨在開發一套自動化病徵檢測系統，利用深度<br>學習技術來即時檢測蝴蝶蘭的健康狀況，從而有效降低病害風險，提升生產效率<br>和產品質量。本研究主要針對四種病害（軟腐病、炭疽病、黃葉病和疫病）進行<br>檢測。為增加病徵影像的多樣性，拍攝方式分為固定攝影機垂直俯拍及手持相機<br>多角度隨機拍攝，在光環境變化的開放空間中進行，並對訓練影像進行亮度、色<br>彩及旋轉等影像擴增處理。然後軟 RoboFlow 線上標註工具進行病徵標記，並利<br>用 YOLOv8L 深度學習模型進行訓練和測試，構建蝴蝶蘭病徵的自動檢測模型。<br>實驗結果顯示，模型對測試樣本中四種病徵的平均精確率均值（mAP）達到 81%。<br>未來該模型可結合機械手臂與自動行走系統，實現自動化病株識別及移除作業。<br>關鍵詞：深度學習、蝴蝶蘭、病徵檢測、YOLO <br> <br></p>
+</div>
+<div class="page"><h2>Page 2</h2>
+<p>361 <br> <br>1、 緒論 <br> <br>在蝴蝶蘭幼苗的培育階段，由於植株較為脆弱，容容易感染病病， 未能及<br>時發現並移除受感染的植株，具傳染性的病害可能迅速擴散，影響周圍健康的植<br>株。台灣目前的排查方式主要依賴人工，效率低且耗費大量人力。因此， 能引<br>入自動化技術軟取代傳統人工作業，不僅能提升效率，還能有效降低人力成本。<br>本研究主要目的是將蝴蝶蘭植株的病病排查由人工辨識轉為自動化檢測。為 <br>此，我們採用深度學習訓練模型，能夠辨識蝴蝶蘭常見的四種病病：軟腐病、黃<br>葉病、炭疽病和疫病。期望將該模型與機械手臂及自動行走系統結合，實現對感<br>染植株的自動化移除作業。 <br> <br>2、 材料與方法 <br> <br>2.1 收集影像及病徵標記 <br>本研究所拍攝的蝴蝶蘭染病植株，來自台市後後區「明星蘭蘭」 所培育 3<br>吋盆苗。病徵影像的取得方式是使用一台簡易取像台車，橫跨苗床推移，並利用<br>台車上的兩台相機垂直俯拍感染病害的盆苗。為了增加病徵影像的樣本數量，亦<br>使用手持相機對染病植株進行多角度拍攝。 <br>目前所蒐集的病病種類有 4 種，包括軟腐病、炭疽、疫病及黃葉病。隨後使<br>用 RoboFlow 線上標註工具對病徵部位進行矩形邊界框的框選與標註(如圖 1 所<br>示)，用軟建立病徵檢測模型。 <br> <br> <br>(a) <br> <br>(b) <br> <br>(c) <br> <br>(d) <br>圖 1 四種蘭苗病徵：(a)軟腐病、(b)炭疽病、(c)疫病、(d)黃葉病 <br></p>
+<img src="D:\python生活工具\pdf/page_2_img_1.jpeg" alt="Page 2 Image 1">
+<img src="D:\python生活工具\pdf/page_2_img_2.jpeg" alt="Page 2 Image 2">
+<img src="D:\python生活工具\pdf/page_2_img_3.jpeg" alt="Page 2 Image 3">
+<img src="D:\python生活工具\pdf/page_2_img_4.jpeg" alt="Page 2 Image 4">
+</div>
+<div class="page"><h2>Page 3</h2>
+<p>362 <br> <br>2.2 建立盆苗病徵檢測模型 <br>YOLO 是一種一階段物件檢測的深度學習模型，因中結構簡單、運行速度 <br>快、且具高辨識率，廣泛應用於各類影像辨識任務。本研究使用 YOLOv8l 深度模<br>型對收集的病徵影像樣本進行訓練，軟建立四種病徵的檢測模型。YOLOv8l 模型的<br>程式從 GitHub 網頁下載，基於 PyTorch 框架開發，並曾使用 Microsoft COCO <br>資料集進行預訓練。在模型訓練前，載入預訓練模型的權重作為初始權重，軟加快<br>訓練速度。主要訓練參數設定為：batch size 為 4， 大訓練期期（epoch）為 500 次，<br>影像尺寸為 640×480。 <br>3、 結果與討論 <br>本研究目前共收集 706 張病徵影像，標註的病徵總數達 955 個。由於不同<br>植株的病徵被視為不同的目標，因此將被標註為獨立的邊界框。此外，由於單張<br>影像可能包含多個病徵，故病徵的標註數量超過影像數量。 <br>本研究將收集到的蝴蝶蘭感染病害盆栽影像，按 7:2:1 的比例劃分為訓練集、<br>驗證集和測試集，並使用 YOLOv8l 模型進行訓練與測試。測試結果如表 2 所 <br>示，在 IoU 門檻值設為 0.5 的條件下，模型對四種病徵的平均 Precision、Recall<br>和 mAP50 分別為 84.9%、75.3% 和 81.0%。當 IoU 門檻值從 0.5 開始，每次<br>軟 0.05 間隔逐步提升至 0.95，進行 10 種較高門檻值條件下的 mAP50-95 計算，<br>結果為 57.0%。圖 2 顯示了模型對四種病徵的測試實例。 <br>表 2 YOLOv8L 盆苗病徵檢測模型測試結果 <br>病徵類別\辨識率 <br>Precision(%) <br>Recall(%) <br>mAP50(%) <br>mAP50-95 (%) 備註 <br>炭疽病 <br>84.9 <br>74.1 <br>80.1 <br>50.0 <br>軟腐病 <br>75.6 <br>75.3 <br>77.2 <br>55.4 <br>黃葉病 <br>82.0 <br>64.4 <br>72.3 <br>53.7 <br>疫病 <br>97.0 <br>87.7 <br>94.4 <br>53.7 <br>平均 <br>84.9 <br>75.3 <br>81.0 <br>57.0 <br></p>
+</div>
+<div class="page"><h2>Page 4</h2>
+<p>363 <br> <br> <br> <br>(a) <br> <br>(b) <br> <br>(c) <br> <br>(d) <br>圖 2 模型對四種蘭苗病徵的測試實例：(a)軟腐病、(b)炭疽病、(c)疫病、 <br>(d)黃葉病 <br> <br>4、 結論 <br> <br>由於炭疽病與疫病的病徵較為星顯，且中症狀變化較小，模型對這兩種病害<br>的檢測結果具有較高的辨識率（AP），分別為 80.1% 和 94.4%。軟腐病因外觀<br>症狀變化較大，導致模型對中辨識率僅為 77.2%，管軟軟腐病的樣本數是四種病<br>害中 多的，但仍顯示目前所收集的樣本數不足軟涵蓋所有軟腐病的症狀變化，<br>因此軟腐病的病徵樣本仍需進一步擴充。黃葉病的病徵與葉片自然枯萎的徵狀頗<br>為相似，導致模型對中辨識率僅為 72.3%，是四種病害中辨識率 低的。 <br>由於實地收集的病害影像樣本數量有限，特別是炭疽病、疫病及黃葉病的樣<br>本不足，模型的整體辨識率尚未達預期目標。因此，本研究將持續進行病徵影像<br>的收集，進一步優化模型，期望建立更為精確的病徵辨識系統。未來，我們期望<br>能結合機械手臂與自動行走系統，實現對受病害感染植株的自動檢測與即時移除，<br>軟防止病病蔓延至健康植株。 <br></p>
+<img src="D:\python生活工具\pdf/page_4_img_1.jpeg" alt="Page 4 Image 1">
+<img src="D:\python生活工具\pdf/page_4_img_2.jpeg" alt="Page 4 Image 2">
+<img src="D:\python生活工具\pdf/page_4_img_3.jpeg" alt="Page 4 Image 3">
+<img src="D:\python生活工具\pdf/page_4_img_4.jpeg" alt="Page 4 Image 4">
+</div>
+<div class="page"><h2>Page 5</h2>
+<p>364 <br> <br>誌謝 <br> <br>感謝明星蘭蘭」 提供試驗場所，供本研究拍攝蝴蝶蘭影像。同時本研究承<br>蒙農業部(計劃編號 113 農科-1.6.3-科-01)的經費支援下方得完成，謹致謝意。 <br> <br>參考文獻 <br> <br>1. <br>Dwyer, B., Nelson, J., Hansen, T., (2024). Roboflow (Version 1.0) <br>[Software]. https://roboflow.com. computer vision (2024/10/09) <br>2. <br>Jocher, G., Chaurasia, A., & Qiu, J. (2023). YOLO by Ultralytics (Version <br>8.0.0). https://github.com/ultralytics/ultralytics (2024/10/09) <br></p>
+</div>
+
+</body>
+</html>
